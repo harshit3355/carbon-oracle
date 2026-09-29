@@ -1,0 +1,14 @@
+[project]
+name = "carbon-oracle"
+version = "0.1.0"
+description = "Risk-bounded carbon, cost and deadline scheduling of delay-tolerant AI jobs across regions, evaluated offline against a hindsight oracle on real GB carbon-intensity data."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,28 @@
+{
+  "source": "https://api.carbonintensity.org.uk",
+  "endpoints": [
+    "/intensity/{from}/{to}",
+    "/regional/intensity/{from}/{to}"
+  ],
+  "publisher": "National Energy System Operator (NESO) Carbon Intensity API",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "fetched_at": "2026-09-29T09:05:37+00:00",
+  "window": {
+    "start": "2026-09-01T00:00Z",
+    "end": "2026-09-21T23:30Z",
+    "half_hours": 1008
+  },
+  "columns": {
+    "national_forecast": "GB forecast gCO2/kWh",
+    "national_actual": "GB actual gCO2/kWh",
+    "uk-lon": "regional forecast gCO2/kWh, London (API regionid 13)",
+    "uk-soe": "regional forecast gCO2/kWh, South England (API regionid 12)",
+    "uk-eae": "regional forecast gCO2/kWh, East England (API regionid 10)",
+    "uk-swe": "regional forecast gCO2/kWh, South West England (API regionid 11)",
+    "uk-wmd": "regional forecast gCO2/kWh, West Midlands (API regionid 8)",
+    "uk-swa": "regional forecast gCO2/kWh, South Wales (API regionid 7)",
+    "uk-nwm": "regional forecast gCO2/kWh, North Wales & Merseyside (API regionid 6)"
+  },
+  "sha256": "f985a61551f70caa531513d8056823686d945c17b50cdd0c562c8a9b8811f877"
+}
