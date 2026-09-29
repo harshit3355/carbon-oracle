@@ -1,0 +1,3133 @@
+{
+  "seed": 7,
+  "scenarios": 24,
+  "jobs_per_scenario": 50,
+  "infeasible_in_hindsight": 0,
+  "carbon_forecast_error": {
+    "actual_over_forecast_p5": 0.792,
+    "p50": 1.034,
+    "p95": 1.649
+  },
+  "summary": {
+    "nominal": {
+      "run_now_home": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 1.2333,
+        "objective_gap": 1.2333,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 4561.0,
+        "carbon_vs_run_now": 0.0,
+        "carbon_vs_oracle": 4.3352,
+        "cost_usd": 102554.0
+      },
+      "cheapest": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 1.2319,
+        "objective_gap": 1.2319,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 4713.9,
+        "carbon_vs_run_now": 0.0335,
+        "carbon_vs_oracle": 4.5141,
+        "cost_usd": 97862.0
+      },
+      "lowest_carbon_now": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 0.442,
+        "objective_gap": 0.392,
+        "deadline_misses": 4,
+        "miss_rate": 0.005,
+        "residency_violations": 0,
+        "carbon_kg": 2118.4,
+        "carbon_vs_run_now": -0.5355,
+        "carbon_vs_oracle": 1.478,
+        "cost_usd": 107156.0
+      },
+      "deadline_first": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 1.2319,
+        "objective_gap": 1.2319,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 4713.9,
+        "carbon_vs_run_now": 0.0335,
+        "carbon_vs_oracle": 4.5141,
+        "cost_usd": 97862.0
+      },
+      "best_window_home": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 2.6367,
+        "objective_gap": 0.6492,
+        "deadline_misses": 159,
+        "miss_rate": 0.1988,
+        "residency_violations": 0,
+        "carbon_kg": 2820.7,
+        "carbon_vs_run_now": -0.3816,
+        "carbon_vs_oracle": 2.2995,
+        "cost_usd": 102554.0
+      },
+      "deterministic": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 1.3005,
+        "objective_gap": 0.038,
+        "deadline_misses": 101,
+        "miss_rate": 0.1263,
+        "residency_violations": 0,
+        "carbon_kg": 970.2,
+        "carbon_vs_run_now": -0.7873,
+        "carbon_vs_oracle": 0.1349,
+        "cost_usd": 107409.0
+      },
+      "padded": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 0.451,
+        "objective_gap": 0.0635,
+        "deadline_misses": 31,
+        "miss_rate": 0.0387,
+        "residency_violations": 0,
+        "carbon_kg": 1025.0,
+        "carbon_vs_run_now": -0.7753,
+        "carbon_vs_oracle": 0.199,
+        "cost_usd": 107401.0
+      },
+      "rgw_eps0.01": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 0.2433,
+        "objective_gap": 0.1808,
+        "deadline_misses": 5,
+        "miss_rate": 0.0063,
+        "residency_violations": 0,
+        "carbon_kg": 1316.1,
+        "carbon_vs_run_now": -0.7114,
+        "carbon_vs_oracle": 0.5395,
+        "cost_usd": 106863.0
+      },
+      "rgw": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 0.1886,
+        "objective_gap": 0.0886,
+        "deadline_misses": 8,
+        "miss_rate": 0.01,
+        "residency_violations": 0,
+        "carbon_kg": 1114.6,
+        "carbon_vs_run_now": -0.7556,
+        "carbon_vs_oracle": 0.3038,
+        "cost_usd": 107344.0
+      },
+      "rgw_eps0.20": {
+        "scenarios": 16,
+        "jobs": 800,
+        "green_regret": 0.5006,
+        "objective_gap": 0.0506,
+        "deadline_misses": 36,
+        "miss_rate": 0.045,
+        "residency_violations": 0,
+        "carbon_kg": 1014.4,
+        "carbon_vs_run_now": -0.7776,
+        "carbon_vs_oracle": 0.1866,
+        "cost_usd": 107400.0
+      }
+    },
+    "calm": {
+      "run_now_home": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.1313,
+        "objective_gap": 1.1313,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 906.8,
+        "carbon_vs_run_now": 0.0,
+        "carbon_vs_oracle": 8.0632,
+        "cost_usd": 20027.0
+      },
+      "cheapest": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.0998,
+        "objective_gap": 1.0998,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 938.5,
+        "carbon_vs_run_now": 0.035,
+        "carbon_vs_oracle": 8.3804,
+        "cost_usd": 18942.0
+      },
+      "lowest_carbon_now": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.3897,
+        "objective_gap": 0.3897,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 430.6,
+        "carbon_vs_run_now": -0.5251,
+        "carbon_vs_oracle": 3.3042,
+        "cost_usd": 20860.0
+      },
+      "deadline_first": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.0998,
+        "objective_gap": 1.0998,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 938.5,
+        "carbon_vs_run_now": 0.035,
+        "carbon_vs_oracle": 8.3804,
+        "cost_usd": 18942.0
+      },
+      "best_window_home": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.3182,
+        "objective_gap": 0.4183,
+        "deadline_misses": 18,
+        "miss_rate": 0.09,
+        "residency_violations": 0,
+        "carbon_kg": 387.3,
+        "carbon_vs_run_now": -0.5729,
+        "carbon_vs_oracle": 2.8713,
+        "cost_usd": 20027.0
+      },
+      "deterministic": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.0712,
+        "objective_gap": 0.0212,
+        "deadline_misses": 1,
+        "miss_rate": 0.005,
+        "residency_violations": 0,
+        "carbon_kg": 117.8,
+        "carbon_vs_run_now": -0.8701,
+        "carbon_vs_oracle": 0.1775,
+        "cost_usd": 20929.0
+      },
+      "padded": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.042,
+        "objective_gap": 0.042,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 131.3,
+        "carbon_vs_run_now": -0.8552,
+        "carbon_vs_oracle": 0.3127,
+        "cost_usd": 20933.0
+      },
+      "rgw_eps0.01": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.1566,
+        "objective_gap": 0.1566,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 186.3,
+        "carbon_vs_run_now": -0.7945,
+        "carbon_vs_oracle": 0.8625,
+        "cost_usd": 20821.0
+      },
+      "rgw": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.0636,
+        "objective_gap": 0.0636,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 143.2,
+        "carbon_vs_run_now": -0.8421,
+        "carbon_vs_oracle": 0.431,
+        "cost_usd": 20893.0
+      },
+      "rgw_eps0.20": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.035,
+        "objective_gap": 0.035,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 129.4,
+        "carbon_vs_run_now": -0.8573,
+        "carbon_vs_oracle": 0.2935,
+        "cost_usd": 20930.0
+      }
+    },
+    "tail_shift": {
+      "run_now_home": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.3442,
+        "objective_gap": 1.1442,
+        "deadline_misses": 4,
+        "miss_rate": 0.02,
+        "residency_violations": 0,
+        "carbon_kg": 836.2,
+        "carbon_vs_run_now": 0.0,
+        "carbon_vs_oracle": 6.153,
+        "cost_usd": 24308.0
+      },
+      "cheapest": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.1088,
+        "objective_gap": 1.1088,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 886.5,
+        "carbon_vs_run_now": 0.0601,
+        "carbon_vs_oracle": 6.5831,
+        "cost_usd": 23180.0
+      },
+      "lowest_carbon_now": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.8337,
+        "objective_gap": 0.2837,
+        "deadline_misses": 11,
+        "miss_rate": 0.055,
+        "residency_violations": 0,
+        "carbon_kg": 294.6,
+        "carbon_vs_run_now": -0.6476,
+        "carbon_vs_oracle": 1.5205,
+        "cost_usd": 25434.0
+      },
+      "deadline_first": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.1088,
+        "objective_gap": 1.1088,
+        "deadline_misses": 0,
+        "miss_rate": 0.0,
+        "residency_violations": 0,
+        "carbon_kg": 886.5,
+        "carbon_vs_run_now": 0.0601,
+        "carbon_vs_oracle": 6.5831,
+        "cost_usd": 23180.0
+      },
+      "best_window_home": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 2.9247,
+        "objective_gap": 0.6247,
+        "deadline_misses": 46,
+        "miss_rate": 0.23,
+        "residency_violations": 0,
+        "carbon_kg": 570.3,
+        "carbon_vs_run_now": -0.3179,
+        "carbon_vs_oracle": 3.8789,
+        "cost_usd": 24308.0
+      },
+      "deterministic": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.7737,
+        "objective_gap": 0.0737,
+        "deadline_misses": 34,
+        "miss_rate": 0.17,
+        "residency_violations": 0,
+        "carbon_kg": 173.1,
+        "carbon_vs_run_now": -0.793,
+        "carbon_vs_oracle": 0.4803,
+        "cost_usd": 25474.0
+      },
+      "padded": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.186,
+        "objective_gap": 0.086,
+        "deadline_misses": 22,
+        "miss_rate": 0.11,
+        "residency_violations": 0,
+        "carbon_kg": 177.3,
+        "carbon_vs_run_now": -0.788,
+        "carbon_vs_oracle": 0.5166,
+        "cost_usd": 25466.0
+      },
+      "rgw_eps0.01": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 0.7611,
+        "objective_gap": 0.2111,
+        "deadline_misses": 11,
+        "miss_rate": 0.055,
+        "residency_violations": 0,
+        "carbon_kg": 209.7,
+        "carbon_vs_run_now": -0.7492,
+        "carbon_vs_oracle": 0.7942,
+        "cost_usd": 25289.0
+      },
+      "rgw": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.1823,
+        "objective_gap": 0.1323,
+        "deadline_misses": 21,
+        "miss_rate": 0.105,
+        "residency_violations": 0,
+        "carbon_kg": 194.5,
+        "carbon_vs_run_now": -0.7674,
+        "carbon_vs_oracle": 0.664,
+        "cost_usd": 25439.0
+      },
+      "rgw_eps0.20": {
+        "scenarios": 4,
+        "jobs": 200,
+        "green_regret": 1.3825,
+        "objective_gap": 0.0825,
+        "deadline_misses": 26,
+        "miss_rate": 0.13,
+        "residency_violations": 0,
+        "carbon_kg": 176.8,
+        "carbon_vs_run_now": -0.7885,
+        "carbon_vs_oracle": 0.5127,
+        "cost_usd": 25466.0
+      }
+    }
+  },
+  "mechanism_vs_ablation": {
+    "nominal": {
+      "extra_carbon": 0.1488,
+      "miss_rate": 0.01,
+      "ablation_miss_rate": 0.1263,
+      "green_regret": 0.1886,
+      "ablation_green_regret": 1.3005
+    },
+    "calm": {
+      "extra_carbon": 0.2156,
+      "miss_rate": 0.0,
+      "ablation_miss_rate": 0.005,
+      "green_regret": 0.0636,
+      "ablation_green_regret": 0.0712
+    },
+    "tail_shift": {
+      "extra_carbon": 0.1236,
+      "miss_rate": 0.105,
+      "ablation_miss_rate": 0.17,
+      "green_regret": 1.1823,
+      "ablation_green_regret": 1.7737
+    }
+  },
+  "mechanism_worse_than_ablation": [
+    {
+      "scenario": "calm-d01",
+      "regime": "calm",
+      "rgw_green_regret": 0.094,
+      "rgw_carbon_kg": 69.18,
+      "rgw_deadline_misses": 0,
+      "deterministic_green_regret": 0.0311,
+      "deterministic_carbon_kg": 53.33,
+      "deterministic_deadline_misses": 0,
+      "extra_carbon": 0.2972
+    },
+    {
+      "scenario": "calm-d05",
+      "regime": "calm",
+      "rgw_green_regret": 0.0371,
+      "rgw_carbon_kg": 25.78,
+      "rgw_deadline_misses": 0,
+      "deterministic_green_regret": 0.0262,
+      "deterministic_carbon_kg": 25.76,
+      "deterministic_deadline_misses": 0,
+      "extra_carbon": 0.0008
+    },
+    {
+      "scenario": "calm-d09",
+      "regime": "calm",
+      "rgw_green_regret": 0.0355,
+      "rgw_carbon_kg": 23.44,
+      "rgw_deadline_misses": 0,
+      "deterministic_green_regret": 0.006,
+      "deterministic_carbon_kg": 21.09,
+      "deterministic_deadline_misses": 0,
+      "extra_carbon": 0.1114
+    },
+    {
+      "scenario": "tail-d11",
+      "regime": "tail_shift",
+      "rgw_green_regret": 1.2439,
+      "rgw_carbon_kg": 67.89,
+      "rgw_deadline_misses": 5,
+      "deterministic_green_regret": 1.0002,
+      "deterministic_carbon_kg": 65.2,
+      "deterministic_deadline_misses": 4,
+      "extra_carbon": 0.0413
+    }
+  ],
+  "per_scenario": [
+    {
+      "scenario": "nominal-d00",
+      "day": 0,
+      "regime": "nominal",
+      "seed": 7000,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.2321,
+          "objective_gap": 1.2321,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 301.99,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 6827.95
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.1777,
+          "objective_gap": 1.1777,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 262.24,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 6509.65
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.2188,
+          "objective_gap": 0.2188,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 110.61,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 7171.02
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.1777,
+          "objective_gap": 1.1777,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 262.24,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 6509.65
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.1215,
+          "objective_gap": 0.7215,
+          "deadline_misses": 7,
+          "residency_violations": 0,
+          "carbon_kg": 190.51,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 6827.95
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.8321,
+          "objective_gap": 0.0321,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 73.88,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 7112.33
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.2592,
+          "objective_gap": 0.0592,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 75.13,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 7146.15
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1156,
+          "objective_gap": 0.1156,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 81.69,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 7110.14
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.062,
+          "objective_gap": 0.062,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 75.81,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 7143.55
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.445,
+          "objective_gap": 0.045,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 72.86,
+          "oracle_carbon_kg": 61.82,
+          "cost_usd": 7139.1
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d01",
+      "day": 1,
+      "regime": "nominal",
+      "seed": 7001,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.39,
+          "objective_gap": 1.39,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 284.57,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6156.62
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.3887,
+          "objective_gap": 1.3887,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 304.9,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 5851.76
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.9003,
+          "objective_gap": 0.9003,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 274.1,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6306.11
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.3887,
+          "objective_gap": 1.3887,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 304.9,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 5851.76
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.634,
+          "objective_gap": 0.434,
+          "deadline_misses": 11,
+          "residency_violations": 0,
+          "carbon_kg": 137.69,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6156.62
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 2.209,
+          "objective_gap": 0.009,
+          "deadline_misses": 11,
+          "residency_violations": 0,
+          "carbon_kg": 52.83,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6420.95
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.4532,
+          "objective_gap": 0.0532,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 67.3,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6393.8
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.4017,
+          "objective_gap": 0.4017,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 99.94,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6338.42
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0986,
+          "objective_gap": 0.0986,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 78.28,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6369.04
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.2593,
+          "objective_gap": 0.0593,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 67.27,
+          "oracle_carbon_kg": 53.07,
+          "cost_usd": 6395.73
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d02",
+      "day": 2,
+      "regime": "nominal",
+      "seed": 7002,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 0.9053,
+          "objective_gap": 0.9053,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 118.85,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5038.69
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 0.9988,
+          "objective_gap": 0.9988,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 152.39,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 4748.2
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.6295,
+          "objective_gap": 0.2295,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 42.03,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5286.61
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 0.9988,
+          "objective_gap": 0.9988,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 152.39,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 4748.2
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.9995,
+          "objective_gap": 0.3995,
+          "deadline_misses": 8,
+          "residency_violations": 0,
+          "carbon_kg": 62.09,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5038.69
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.064,
+          "objective_gap": 0.064,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 18.2,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5279.46
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.6804,
+          "objective_gap": 0.0804,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 18.95,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5275.6
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.5605,
+          "objective_gap": 0.1605,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 25.67,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5244.54
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.4904,
+          "objective_gap": 0.0904,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 22.26,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5272.4
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.6632,
+          "objective_gap": 0.0632,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 18.54,
+          "oracle_carbon_kg": 13.05,
+          "cost_usd": 5275.14
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d03",
+      "day": 3,
+      "regime": "nominal",
+      "seed": 7003,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.0473,
+          "objective_gap": 1.0473,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 185.07,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5596.22
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.0441,
+          "objective_gap": 1.0441,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 187.78,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5396.75
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.267,
+          "objective_gap": 0.267,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 88.83,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5905.38
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.0441,
+          "objective_gap": 1.0441,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 187.78,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5396.75
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.0797,
+          "objective_gap": 0.4797,
+          "deadline_misses": 8,
+          "residency_violations": 0,
+          "carbon_kg": 107.0,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5596.22
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.8182,
+          "objective_gap": 0.0182,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 40.01,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5887.31
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.2214,
+          "objective_gap": 0.0214,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 39.17,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5892.94
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1517,
+          "objective_gap": 0.1517,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 51.11,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5849.53
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0712,
+          "objective_gap": 0.0712,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 43.69,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5886.5
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.4187,
+          "objective_gap": 0.0187,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 39.02,
+          "oracle_carbon_kg": 34.03,
+          "cost_usd": 5889.45
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d04",
+      "day": 4,
+      "regime": "nominal",
+      "seed": 7004,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 0.904,
+          "objective_gap": 0.904,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 254.33,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 6898.5
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.0847,
+          "objective_gap": 1.0847,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 282.56,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 6677.92
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.3723,
+          "objective_gap": 0.3723,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 92.67,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 7353.56
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.0847,
+          "objective_gap": 1.0847,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 282.56,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 6677.92
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.1917,
+          "objective_gap": 0.3917,
+          "deadline_misses": 9,
+          "residency_violations": 0,
+          "carbon_kg": 136.18,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 6898.5
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.081,
+          "objective_gap": 0.081,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 48.56,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 7324.69
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.0935,
+          "objective_gap": 0.0935,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 49.41,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 7322.8
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1206,
+          "objective_gap": 0.1206,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 56.9,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 7323.15
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.099,
+          "objective_gap": 0.099,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 52.02,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 7322.8
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.0862,
+          "objective_gap": 0.0862,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 49.19,
+          "oracle_carbon_kg": 31.58,
+          "cost_usd": 7324.69
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d05",
+      "day": 5,
+      "regime": "nominal",
+      "seed": 7005,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.3446,
+          "objective_gap": 1.3446,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 338.88,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7194.06
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.3731,
+          "objective_gap": 1.3731,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 373.98,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 6939.53
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.3517,
+          "objective_gap": 0.3517,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 141.56,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7662.83
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.3731,
+          "objective_gap": 1.3731,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 373.98,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 6939.53
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 3.1524,
+          "objective_gap": 0.7524,
+          "deadline_misses": 12,
+          "residency_violations": 0,
+          "carbon_kg": 221.52,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7194.06
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.1084,
+          "objective_gap": 0.1084,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 65.44,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7644.34
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.1188,
+          "objective_gap": 0.1188,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 69.77,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7656.23
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1968,
+          "objective_gap": 0.1968,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 86.65,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7607.31
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.1265,
+          "objective_gap": 0.1265,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 72.41,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7656.23
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.1177,
+          "objective_gap": 0.1177,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 69.73,
+          "oracle_carbon_kg": 47.22,
+          "cost_usd": 7656.23
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d06",
+      "day": 6,
+      "regime": "nominal",
+      "seed": 7006,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 0.9721,
+          "objective_gap": 0.9721,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 244.0,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 6902.24
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.0224,
+          "objective_gap": 1.0224,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 258.12,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 6558.54
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.1841,
+          "objective_gap": 0.1841,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 109.49,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 7212.22
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.0224,
+          "objective_gap": 1.0224,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 258.12,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 6558.54
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.8883,
+          "objective_gap": 0.6883,
+          "deadline_misses": 6,
+          "residency_violations": 0,
+          "carbon_kg": 206.7,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 6902.24
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.0688,
+          "objective_gap": 0.0688,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 85.25,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 7132.79
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.2683,
+          "objective_gap": 0.0683,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 85.28,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 7135.09
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.3167,
+          "objective_gap": 0.1167,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 95.34,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 7128.61
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.2775,
+          "objective_gap": 0.0775,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 87.42,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 7140.05
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.2685,
+          "objective_gap": 0.0685,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 85.2,
+          "oracle_carbon_kg": 70.07,
+          "cost_usd": 7132.79
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d07",
+      "day": 7,
+      "regime": "nominal",
+      "seed": 7007,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 0.8843,
+          "objective_gap": 0.8843,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 218.45,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 5996.3
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.0026,
+          "objective_gap": 1.0026,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 214.61,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 5730.7
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.1464,
+          "objective_gap": 0.1464,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 63.92,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 6299.05
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.0026,
+          "objective_gap": 1.0026,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 214.61,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 5730.7
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.3768,
+          "objective_gap": 0.5768,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 142.4,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 5996.3
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.2266,
+          "objective_gap": 0.0266,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 38.04,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 6324.57
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.0367,
+          "objective_gap": 0.0367,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 39.53,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 6324.1
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.0966,
+          "objective_gap": 0.0966,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 44.67,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 6300.5
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0412,
+          "objective_gap": 0.0412,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 40.41,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 6324.1
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.0341,
+          "objective_gap": 0.0341,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 39.5,
+          "oracle_carbon_kg": 32.15,
+          "cost_usd": 6324.57
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d08",
+      "day": 8,
+      "regime": "nominal",
+      "seed": 7008,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.1942,
+          "objective_gap": 1.1942,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 333.58,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 6901.27
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.0511,
+          "objective_gap": 1.0511,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 317.05,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 6589.61
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.4827,
+          "objective_gap": 0.4827,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 193.6,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 7129.76
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.0511,
+          "objective_gap": 1.0511,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 317.05,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 6589.61
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.2401,
+          "objective_gap": 0.6401,
+          "deadline_misses": 8,
+          "residency_violations": 0,
+          "carbon_kg": 238.11,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 6901.27
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.0256,
+          "objective_gap": 0.0256,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 119.77,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 7129.93
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.6424,
+          "objective_gap": 0.0424,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 123.08,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 7129.93
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.2016,
+          "objective_gap": 0.2016,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 150.3,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 7085.41
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.2882,
+          "objective_gap": 0.0882,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 129.73,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 7126.16
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.6296,
+          "objective_gap": 0.0296,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 120.85,
+          "oracle_carbon_kg": 118.2,
+          "cost_usd": 7129.93
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d09",
+      "day": 9,
+      "regime": "nominal",
+      "seed": 7009,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.2288,
+          "objective_gap": 1.2288,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 285.77,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 5882.85
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.3455,
+          "objective_gap": 1.3455,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 343.08,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 5637.78
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.2267,
+          "objective_gap": 0.2267,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 103.43,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 6146.72
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.3455,
+          "objective_gap": 1.3455,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 343.08,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 5637.78
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.9839,
+          "objective_gap": 0.7839,
+          "deadline_misses": 6,
+          "residency_violations": 0,
+          "carbon_kg": 240.11,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 5882.85
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.2239,
+          "objective_gap": 0.0239,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 84.39,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 6146.72
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.236,
+          "objective_gap": 0.036,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 84.62,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 6146.72
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.113,
+          "objective_gap": 0.113,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 103.46,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 6129.98
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0445,
+          "objective_gap": 0.0445,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 85.19,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 6145.0
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.0253,
+          "objective_gap": 0.0253,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 84.43,
+          "oracle_carbon_kg": 75.33,
+          "cost_usd": 6146.72
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d10",
+      "day": 10,
+      "regime": "nominal",
+      "seed": 7010,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.8855,
+          "objective_gap": 1.8855,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 456.92,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7574.83
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 2.07,
+          "objective_gap": 2.07,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 539.68,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7237.22
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.8273,
+          "objective_gap": 0.6273,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 208.49,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7844.25
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 2.07,
+          "objective_gap": 2.07,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 539.68,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7237.22
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 4.8702,
+          "objective_gap": 0.6702,
+          "deadline_misses": 21,
+          "residency_violations": 0,
+          "carbon_kg": 203.56,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7574.83
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 2.6089,
+          "objective_gap": 0.0089,
+          "deadline_misses": 13,
+          "residency_violations": 0,
+          "carbon_kg": 68.94,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7856.41
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 1.4765,
+          "objective_gap": 0.0765,
+          "deadline_misses": 7,
+          "residency_violations": 0,
+          "carbon_kg": 74.94,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7831.02
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.4433,
+          "objective_gap": 0.2433,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 109.49,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7816.38
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.3338,
+          "objective_gap": 0.1338,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 79.63,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7821.82
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 1.8172,
+          "objective_gap": 0.0172,
+          "deadline_misses": 9,
+          "residency_violations": 0,
+          "carbon_kg": 72.29,
+          "oracle_carbon_kg": 70.96,
+          "cost_usd": 7840.15
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d11",
+      "day": 11,
+      "regime": "nominal",
+      "seed": 7011,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 0.9421,
+          "objective_gap": 0.9421,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 221.28,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 6777.65
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 0.7855,
+          "objective_gap": 0.7855,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 190.78,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 6368.85
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.1623,
+          "objective_gap": 0.1623,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 78.47,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 7019.74
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 0.7855,
+          "objective_gap": 0.7855,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 190.78,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 6368.85
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.4396,
+          "objective_gap": 0.6396,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 173.57,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 6777.65
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.4423,
+          "objective_gap": 0.0423,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 64.09,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 7022.99
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.0495,
+          "objective_gap": 0.0495,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 64.25,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 7024.21
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1286,
+          "objective_gap": 0.1286,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 69.17,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 6982.86
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0741,
+          "objective_gap": 0.0741,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 64.98,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 7020.69
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.2457,
+          "objective_gap": 0.0457,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 64.17,
+          "oracle_carbon_kg": 52.9,
+          "cost_usd": 7024.21
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d12",
+      "day": 12,
+      "regime": "nominal",
+      "seed": 7012,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.4669,
+          "objective_gap": 1.4669,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 437.62,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 6718.32
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.4211,
+          "objective_gap": 1.4211,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 456.87,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 6380.24
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 1.1241,
+          "objective_gap": 0.9241,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 333.71,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 6790.64
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.4211,
+          "objective_gap": 1.4211,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 456.87,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 6380.24
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 4.303,
+          "objective_gap": 0.703,
+          "deadline_misses": 18,
+          "residency_violations": 0,
+          "carbon_kg": 261.82,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 6718.32
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 2.6128,
+          "objective_gap": 0.0128,
+          "deadline_misses": 13,
+          "residency_violations": 0,
+          "carbon_kg": 111.26,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 7017.1
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.6337,
+          "objective_gap": 0.0337,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 120.18,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 7016.52
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.4698,
+          "objective_gap": 0.2698,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 175.07,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 6969.47
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.5414,
+          "objective_gap": 0.1414,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 150.18,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 7016.52
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.6305,
+          "objective_gap": 0.0305,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 120.71,
+          "oracle_carbon_kg": 106.69,
+          "cost_usd": 7017.1
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d13",
+      "day": 13,
+      "regime": "nominal",
+      "seed": 7013,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.7806,
+          "objective_gap": 1.7806,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 348.48,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6200.69
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.5846,
+          "objective_gap": 1.5846,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 314.55,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 5932.89
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.4686,
+          "objective_gap": 0.4686,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 100.96,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6519.85
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.5846,
+          "objective_gap": 1.5846,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 314.55,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 5932.89
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 4.7565,
+          "objective_gap": 0.9565,
+          "deadline_misses": 19,
+          "residency_violations": 0,
+          "carbon_kg": 206.64,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6200.69
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 3.8106,
+          "objective_gap": 0.0106,
+          "deadline_misses": 19,
+          "residency_violations": 0,
+          "carbon_kg": 41.4,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6541.18
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.8732,
+          "objective_gap": 0.0732,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 46.0,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6536.54
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.2932,
+          "objective_gap": 0.2932,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 62.74,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6505.52
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.1175,
+          "objective_gap": 0.1175,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 54.36,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6535.64
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 1.0605,
+          "objective_gap": 0.0605,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 44.72,
+          "oracle_carbon_kg": 38.3,
+          "cost_usd": 6536.54
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d14",
+      "day": 14,
+      "regime": "nominal",
+      "seed": 7014,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.2029,
+          "objective_gap": 1.2029,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 212.34,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5213.87
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.1455,
+          "objective_gap": 1.1455,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 196.62,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 4975.57
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.23,
+          "objective_gap": 0.23,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 45.66,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5558.19
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.1455,
+          "objective_gap": 1.1455,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 196.62,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 4975.57
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.1897,
+          "objective_gap": 0.9897,
+          "deadline_misses": 6,
+          "residency_violations": 0,
+          "carbon_kg": 149.31,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5213.87
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.4375,
+          "objective_gap": 0.0375,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 28.46,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5558.19
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.5154,
+          "objective_gap": 0.1154,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 30.07,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5558.19
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.0836,
+          "objective_gap": 0.0836,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 46.55,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5494.97
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.2586,
+          "objective_gap": 0.0586,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 30.46,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5555.8
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.2532,
+          "objective_gap": 0.0532,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 28.95,
+          "oracle_carbon_kg": 23.35,
+          "cost_usd": 5558.19
+        }
+      }
+    },
+    {
+      "scenario": "nominal-d15",
+      "day": 15,
+      "regime": "nominal",
+      "seed": 7015,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.3515,
+          "objective_gap": 1.3515,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 318.84,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 6674.3
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.2152,
+          "objective_gap": 1.2152,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 318.73,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 6326.51
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.4798,
+          "objective_gap": 0.4798,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 130.88,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 6950.1
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.2152,
+          "objective_gap": 1.2152,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 318.73,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 6326.51
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.9596,
+          "objective_gap": 0.5596,
+          "deadline_misses": 12,
+          "residency_violations": 0,
+          "carbon_kg": 143.51,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 6674.3
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.238,
+          "objective_gap": 0.038,
+          "deadline_misses": 6,
+          "residency_violations": 0,
+          "carbon_kg": 29.71,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 7009.73
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.6584,
+          "objective_gap": 0.0584,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 37.34,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 7011.65
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1997,
+          "objective_gap": 0.1997,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 57.38,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 6976.2
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0932,
+          "objective_gap": 0.0932,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 47.75,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 7007.27
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 1.0546,
+          "objective_gap": 0.0546,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 37.01,
+          "oracle_carbon_kg": 26.17,
+          "cost_usd": 7009.73
+        }
+      }
+    },
+    {
+      "scenario": "calm-d01",
+      "day": 1,
+      "regime": "calm",
+      "seed": 7016,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.3447,
+          "objective_gap": 1.3447,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 342.32,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5596.53
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.0751,
+          "objective_gap": 1.0751,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 284.38,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5303.39
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.6396,
+          "objective_gap": 0.6396,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 207.28,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5752.96
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.0751,
+          "objective_gap": 1.0751,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 284.38,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5303.39
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.0087,
+          "objective_gap": 0.4087,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 127.46,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5596.53
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.0311,
+          "objective_gap": 0.0311,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 53.33,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5804.2
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.0759,
+          "objective_gap": 0.0759,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 62.44,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5805.76
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1821,
+          "objective_gap": 0.1821,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 84.46,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5777.14
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.094,
+          "objective_gap": 0.094,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 69.18,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5792.37
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.0661,
+          "objective_gap": 0.0661,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 62.07,
+          "oracle_carbon_kg": 46.26,
+          "cost_usd": 5805.76
+        }
+      }
+    },
+    {
+      "scenario": "calm-d05",
+      "day": 5,
+      "regime": "calm",
+      "seed": 7017,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.0648,
+          "objective_gap": 1.0648,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 175.08,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4749.33
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.0303,
+          "objective_gap": 1.0303,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 215.41,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4500.41
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.3599,
+          "objective_gap": 0.3599,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 93.66,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4938.74
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.0303,
+          "objective_gap": 1.0303,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 215.41,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4500.41
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 0.9043,
+          "objective_gap": 0.3043,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 72.17,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4749.33
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.0262,
+          "objective_gap": 0.0262,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 25.76,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4939.98
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.0255,
+          "objective_gap": 0.0255,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 25.19,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4944.63
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.0749,
+          "objective_gap": 0.0749,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 27.58,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4934.21
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0371,
+          "objective_gap": 0.0371,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 25.78,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4937.81
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.0264,
+          "objective_gap": 0.0264,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 25.24,
+          "oracle_carbon_kg": 19.61,
+          "cost_usd": 4939.98
+        }
+      }
+    },
+    {
+      "scenario": "calm-d09",
+      "day": 9,
+      "regime": "calm",
+      "seed": 7018,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.0221,
+          "objective_gap": 1.0221,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 187.83,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 4955.17
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.1303,
+          "objective_gap": 1.1303,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 206.26,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 4696.44
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.1828,
+          "objective_gap": 0.1828,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 42.05,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 5202.88
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.1303,
+          "objective_gap": 1.1303,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 206.26,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 4696.44
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.31,
+          "objective_gap": 0.51,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 100.64,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 4955.17
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.006,
+          "objective_gap": 0.006,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 21.09,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 5205.12
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.0175,
+          "objective_gap": 0.0175,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 23.92,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 5205.12
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.1488,
+          "objective_gap": 0.1488,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 35.48,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 5174.77
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0355,
+          "objective_gap": 0.0355,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 23.44,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 5200.48
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.0157,
+          "objective_gap": 0.0157,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 23.77,
+          "oracle_carbon_kg": 19.37,
+          "cost_usd": 5205.12
+        }
+      }
+    },
+    {
+      "scenario": "calm-d13",
+      "day": 13,
+      "regime": "calm",
+      "seed": 7019,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.0937,
+          "objective_gap": 1.0937,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 201.54,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4725.9
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.1636,
+          "objective_gap": 1.1636,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 232.46,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4441.75
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.3766,
+          "objective_gap": 0.3766,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 87.65,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4965.44
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.1636,
+          "objective_gap": 1.1636,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 232.46,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4441.75
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.05,
+          "objective_gap": 0.45,
+          "deadline_misses": 8,
+          "residency_violations": 0,
+          "carbon_kg": 87.05,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4725.9
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 0.2216,
+          "objective_gap": 0.0216,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 17.63,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4979.3
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.0492,
+          "objective_gap": 0.0492,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 19.79,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4977.11
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.2207,
+          "objective_gap": 0.2207,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 38.82,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4934.96
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.0876,
+          "objective_gap": 0.0876,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 24.77,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4962.6
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.0319,
+          "objective_gap": 0.0319,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 18.33,
+          "oracle_carbon_kg": 14.81,
+          "cost_usd": 4979.3
+        }
+      }
+    },
+    {
+      "scenario": "tail-d03",
+      "day": 3,
+      "regime": "tail_shift",
+      "seed": 7020,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.0233,
+          "objective_gap": 0.8233,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 131.08,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 5945.66
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 0.9659,
+          "objective_gap": 0.9659,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 172.07,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 5675.06
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.8565,
+          "objective_gap": 0.2565,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 54.28,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 6218.22
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 0.9659,
+          "objective_gap": 0.9659,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 172.07,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 5675.06
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 2.1637,
+          "objective_gap": 0.3637,
+          "deadline_misses": 9,
+          "residency_violations": 0,
+          "carbon_kg": 75.82,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 5945.66
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.4459,
+          "objective_gap": 0.0459,
+          "deadline_misses": 7,
+          "residency_violations": 0,
+          "carbon_kg": 19.42,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 6219.29
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 1.0464,
+          "objective_gap": 0.0464,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 19.24,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 6219.86
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.5398,
+          "objective_gap": 0.1398,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 25.84,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 6186.01
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 1.0956,
+          "objective_gap": 0.0956,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 22.51,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 6207.25
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 1.2455,
+          "objective_gap": 0.0455,
+          "deadline_misses": 6,
+          "residency_violations": 0,
+          "carbon_kg": 19.44,
+          "oracle_carbon_kg": 16.6,
+          "cost_usd": 6219.86
+        }
+      }
+    },
+    {
+      "scenario": "tail-d07",
+      "day": 7,
+      "regime": "tail_shift",
+      "seed": 7021,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.4523,
+          "objective_gap": 1.2523,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 244.97,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 5849.94
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.1296,
+          "objective_gap": 1.1296,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 229.98,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 5580.78
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.9674,
+          "objective_gap": 0.1674,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 44.39,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 6153.88
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.1296,
+          "objective_gap": 1.1296,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 229.98,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 5580.78
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 3.7767,
+          "objective_gap": 0.7767,
+          "deadline_misses": 15,
+          "residency_violations": 0,
+          "carbon_kg": 195.92,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 5849.94
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.6206,
+          "objective_gap": 0.0206,
+          "deadline_misses": 8,
+          "residency_violations": 0,
+          "carbon_kg": 28.44,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 6163.73
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 0.6312,
+          "objective_gap": 0.0312,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 29.34,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 6163.73
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.5502,
+          "objective_gap": 0.1502,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 40.38,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 6105.88
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 0.8682,
+          "objective_gap": 0.0682,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 33.09,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 6158.62
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 0.8284,
+          "objective_gap": 0.0284,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 29.43,
+          "oracle_carbon_kg": 23.48,
+          "cost_usd": 6163.73
+        }
+      }
+    },
+    {
+      "scenario": "tail-d11",
+      "day": 11,
+      "regime": "tail_shift",
+      "seed": 7022,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.4228,
+          "objective_gap": 1.0228,
+          "deadline_misses": 2,
+          "residency_violations": 0,
+          "carbon_kg": 149.36,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6152.73
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 0.8276,
+          "objective_gap": 0.8276,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 145.32,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 5801.5
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.8623,
+          "objective_gap": 0.2623,
+          "deadline_misses": 3,
+          "residency_violations": 0,
+          "carbon_kg": 64.81,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6433.23
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 0.8276,
+          "objective_gap": 0.8276,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 145.32,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 5801.5
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 1.3265,
+          "objective_gap": 0.5265,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 90.04,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6152.73
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 1.0002,
+          "objective_gap": 0.2002,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 65.2,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6441.6
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 1.0015,
+          "objective_gap": 0.2015,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 65.22,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6440.71
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 1.5279,
+          "objective_gap": 0.3279,
+          "deadline_misses": 6,
+          "residency_violations": 0,
+          "carbon_kg": 71.97,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6380.94
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 1.2439,
+          "objective_gap": 0.2439,
+          "deadline_misses": 5,
+          "residency_violations": 0,
+          "carbon_kg": 67.89,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6436.79
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 1.0015,
+          "objective_gap": 0.2015,
+          "deadline_misses": 4,
+          "residency_violations": 0,
+          "carbon_kg": 65.22,
+          "oracle_carbon_kg": 25.67,
+          "cost_usd": 6440.71
+        }
+      }
+    },
+    {
+      "scenario": "tail-d15",
+      "day": 15,
+      "regime": "tail_shift",
+      "seed": 7023,
+      "jobs": 50,
+      "infeasible_in_hindsight": 0,
+      "policies": {
+        "run_now_home": {
+          "jobs": 50,
+          "green_regret": 1.4783,
+          "objective_gap": 1.4783,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 310.77,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6359.44
+        },
+        "cheapest": {
+          "jobs": 50,
+          "green_regret": 1.512,
+          "objective_gap": 1.512,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 339.1,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6122.41
+        },
+        "lowest_carbon_now": {
+          "jobs": 50,
+          "green_regret": 0.6484,
+          "objective_gap": 0.4484,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 131.17,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6629.11
+        },
+        "deadline_first": {
+          "jobs": 50,
+          "green_regret": 1.512,
+          "objective_gap": 1.512,
+          "deadline_misses": 0,
+          "residency_violations": 0,
+          "carbon_kg": 339.1,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6122.41
+        },
+        "best_window_home": {
+          "jobs": 50,
+          "green_regret": 4.432,
+          "objective_gap": 0.832,
+          "deadline_misses": 18,
+          "residency_violations": 0,
+          "carbon_kg": 208.56,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6359.44
+        },
+        "deterministic": {
+          "jobs": 50,
+          "green_regret": 3.0282,
+          "objective_gap": 0.0282,
+          "deadline_misses": 15,
+          "residency_violations": 0,
+          "carbon_kg": 59.99,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6649.68
+        },
+        "padded": {
+          "jobs": 50,
+          "green_regret": 2.0647,
+          "objective_gap": 0.0647,
+          "deadline_misses": 10,
+          "residency_violations": 0,
+          "carbon_kg": 63.49,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6642.06
+        },
+        "rgw_eps0.01": {
+          "jobs": 50,
+          "green_regret": 0.4266,
+          "objective_gap": 0.2266,
+          "deadline_misses": 1,
+          "residency_violations": 0,
+          "carbon_kg": 71.55,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6616.65
+        },
+        "rgw": {
+          "jobs": 50,
+          "green_regret": 1.5216,
+          "objective_gap": 0.1216,
+          "deadline_misses": 7,
+          "residency_violations": 0,
+          "carbon_kg": 71.03,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6635.89
+        },
+        "rgw_eps0.20": {
+          "jobs": 50,
+          "green_regret": 2.4546,
+          "objective_gap": 0.0546,
+          "deadline_misses": 12,
+          "residency_violations": 0,
+          "carbon_kg": 62.75,
+          "oracle_carbon_kg": 51.15,
+          "cost_usd": 6642.06
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "commit": "05c296bdda6ebce91f397add682e6ac56bcb2238",
+    "command": "python -m carbon_oracle bench --out reports",
+    "python": "3.10.6",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "data_sha256": "f985a61551f70caa",
+    "data_source": "https://api.carbonintensity.org.uk",
+    "data_license": "CC BY 4.0",
+    "data_window": "2026-09-01T00:00Z .. 2026-09-21T23:30Z",
+    "data_fetched_at": "2026-09-29T09:05:37+00:00",
+    "generated_at": "2026-09-29T09:14:46+00:00",
+    "seed": 7
+  }
+}
