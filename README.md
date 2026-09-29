@@ -116,7 +116,7 @@ python -m carbon_oracle.fetch --start 2026-09-01 --days 21   # optional: refresh
 
 | Failure | Who suffers here | Handled by RGW? |
 |---|---|---|
-| Carbon forecast wrong (common-mode, 0.79x-1.65x) | everyone vs the oracle | no: RGW optimises the forecast it gets |
+| Carbon forecast wrong (common-mode, 0.792x-1.649x p5-p95) | everyone vs the oracle | no: RGW optimises the forecast it gets |
 | Queue wait longer than forecast | deterministic, best-window | yes, up to `eps`, if history is representative |
 | Runtime longer than estimated | deterministic, best-window | yes, same condition |
 | Error distribution shifts worse than history | RGW too (10.5% misses at eps = 0.05) | **no** |
