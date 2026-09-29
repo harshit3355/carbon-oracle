@@ -1,20 +1,8 @@
 # CARBON ORACLE
 
-**Risk-bounded carbon, cost and deadline scheduling for delay-tolerant AI jobs across regions.**
+**Carbon-aware schedulers that trust point estimates of queue wait and runtime push delay-tolerant AI jobs into the last clean window and miss deadlines.**
 
-Batch inference, embedding backfills, eval suites and fine-tuning jobs can often wait, or run somewhere
-else, to use cleaner electricity. The usual carbon-aware scheduler picks the (region, start time) with
-the lowest *forecast* carbon that still fits the deadline *if every estimate is right*. Queue waits and
-runtimes are not always right, so the plan that waits until the last feasible clean window misses its
-deadline. CARBON ORACLE's **Risk-Bounded Green Window (RGW)** keeps the same objective but only accepts
-placements whose probability of missing the deadline is at most `eps`. The probability comes from the
-empirical history of queue-wait and runtime errors. Data residency is a hard filter. Everything is
-scored with **Green Regret**: the normalised carbon + cost gap to a hindsight oracle, plus a fixed
-penalty for every deadline miss or residency violation.
-
-> v0.1 research prototype, offline, no cloud account. Carbon intensity is **real** (3 weeks of GB
-> regional data, cached). Jobs, prices, queue waits and runtime errors are **synthetic**. The regions
-> are **illustrative**: hypothetical cloud regions placed in GB grid regions. No cloud provider is implied.
+Placing each job at the lowest-forecast-carbon (region, start time) whose probability of missing the deadline, under the empirical history of queue and runtime errors, is at most `eps` keeps most of the carbon reduction while cutting deadline misses; this repository measures what that bound costs and where it fails.
 
 ```mermaid
 flowchart LR
@@ -28,7 +16,43 @@ flowchart LR
   S --> R[Green Regret vs<br/>hindsight oracle]
 ```
 
-## Evidence
+> v0.1 research prototype, offline, no cloud account. Carbon intensity is **real** (3 weeks of GB
+> regional data, cached). Jobs, prices, queue waits and runtime errors are **synthetic**. The regions
+> are **illustrative**: hypothetical cloud regions placed in GB grid regions. No cloud provider is implied.
+
+## Worked example
+
+The CLI does not print single jobs; its smallest unit is a scenario (one day, 50 jobs). The case below
+is scenario `nominal-d13`, read from the JSON report written by the same benchmark run. Output pasted
+verbatim, trimmed with `...`.
+
+```text
+$ python -m carbon_oracle bench --out build/reports
+[nominal]
+  ...
+  best_window_home   regret   2.637  misses 159/800  carbon   2820.7 kg (-38.2% vs run-now)
+  deterministic      regret   1.300  misses 101/800  carbon    970.2 kg (-78.7% vs run-now)
+  padded             regret   0.451  misses  31/800  carbon   1025.0 kg (-77.5% vs run-now)
+  rgw_eps0.01        regret   0.243  misses   5/800  carbon   1316.1 kg (-71.1% vs run-now)
+  rgw                regret   0.189  misses   8/800  carbon   1114.6 kg (-75.6% vs run-now)
+  rgw_eps0.20        regret   0.501  misses  36/800  carbon   1014.4 kg (-77.8% vs run-now)
+[calm]
+  ...
+wrote build\reports\benchmark.json and build\reports\benchmark.md
+
+$ python -c "import json; s=[x for x in json.load(open('build/reports/benchmark.json'))['per_scenario'] if x['scenario']=='nominal-d13'][0]; [print(p, {k: s['policies'][p][k] for k in ('green_regret','deadline_misses','carbon_kg','oracle_carbon_kg')}) for p in ('deterministic','padded','rgw')]"
+deterministic {'green_regret': 3.8106, 'deadline_misses': 19, 'carbon_kg': 41.4, 'oracle_carbon_kg': 38.3}
+padded {'green_regret': 0.8732, 'deadline_misses': 4, 'carbon_kg': 46.0, 'oracle_carbon_kg': 38.3}
+rgw {'green_regret': 0.1175, 'deadline_misses': 0, 'carbon_kg': 54.36, 'oracle_carbon_kg': 38.3}
+```
+
+On that day the ablation (the same optimizer without the chance constraint) emits the least carbon,
+41.4 kg against the hindsight oracle's 38.3 kg, but 19 of its 50 jobs miss their deadline. Hand-tuned
+padding misses 4. RGW (eps = 0.05) misses none and pays for it in carbon: 54.36 kg. The same row
+appears in the per-scenario table of [`reports/benchmark.md`](reports/benchmark.md) as
+`3.81 (19)` / `0.87 (4)` / `0.12 (0)`.
+
+## Results
 
 From [`reports/benchmark.md`](reports/benchmark.md): 24 scenarios x 50 jobs. The 16 **nominal**
 scenarios (800 jobs) draw queue waits and runtimes from the same distribution as the schedulers'
@@ -47,24 +71,26 @@ history. Lower Green Regret is better.
 | RGW, eps = 0.01 | 0.243 | 5/800 (0.6%) | -71.1% |
 | **RGW, eps = 0.05** | **0.189** | **8/800 (1.0%)** | -75.6% |
 
-- **What the risk bound costs.** Removing the chance constraint (the ablation) cuts deadline misses
-  from 12.6% to 1.0% but RGW uses **+14.9%** more carbon than the ablation. With a miss penalty of 10
+Mechanism vs its ablation, per regime:
+
+| Regime | RGW Green Regret | Ablation Green Regret | RGW miss rate | Ablation miss rate | RGW carbon vs ablation |
+|---|---|---|---|---|---|
+| nominal | 0.189 | 1.300 | 1.0% | 12.6% | +14.9% |
+| calm | 0.064 | 0.071 | 0.0% | 0.5% | +21.6% |
+| tail_shift | 1.182 | 1.774 | 10.5% | 17.0% | +12.4% |
+
+- **What the risk bound costs.** Adding the chance constraint cuts deadline misses from 12.6% (the
+  ablation) to 1.0%, and RGW uses **+14.9%** more carbon than the ablation. With a miss penalty of 10
   (1.0 = a job's entire reference carbon, or its entire reference cost) that trade is worth it. If misses
-  were cheap, padding or eps = 0.20 would score better.
-- **By construction:** on the nominal scenarios the history and the realised waits come from the same
-  generator, so the miss rate staying under `eps` is expected, not discovered. What is measured is the
-  carbon price of the bound and how it compares with the obvious hand-tuned padding (Green Regret 0.189
-  vs 0.451, carbon -75.6% vs -77.5%).
+  were cheap, padding or eps = 0.20 would score better. Against the obvious hand-tuned padding: Green
+  Regret 0.189 vs 0.451, carbon -75.6% vs -77.5%.
 - **Negative case: calm queues** (4 scenarios, queues and runtimes better than history). The bound
   reserves slack nobody needed. Here RGW (0.064) loses to hand padding (0.042) and to RGW with
   eps = 0.20 (0.035), and uses +21.6% carbon vs the ablation. In `calm-d01` the deterministic optimizer
   got lucky: 0 misses, and RGW used **+29.7%** more carbon for the same 0 misses.
 - **Failure case: tail shift** (4 scenarios, wider errors and 10% congestion events not seen in
   history). The bound is miscalibrated: RGW misses **10.5%** of deadlines against a promised 5%. That is
-  still better than the ablation (17.0%) and about the same as padding (11.0%). A chance constraint is
-  only as good as the history it was calibrated on.
-- **Residency:** 0 violations for every policy, **by construction**: residency is a filter applied
-  before optimisation, not a trade-off.
+  still better than the ablation (17.0%) and about the same as padding (11.0%).
 - Carbon forecast error is real: the realised intensity is 0.792x (p5) / 1.034x (p50) / 1.649x (p95)
   of what every policy saw. The oracle knew it, so it counts toward everyone's regret.
 
@@ -79,18 +105,18 @@ Needs Python 3.10+. No runtime dependencies. pytest is only needed for the tests
 python -m venv .venv && . .venv/bin/activate       # Windows: .venv\Scripts\activate
 python -m pip install "pytest>=8"
 python -m pytest -q
-python -m carbon_oracle bench --out reports      # all 24 scenarios, about 10 s, offline
+python -m carbon_oracle bench --out reports      # all 24 scenarios, offline
 python -m carbon_oracle.fetch --start 2026-09-01 --days 21   # optional: refresh the cached trace (network)
 ```
 
-## How it works
+## Mechanism
 
 - **Data** ([`data/`](data/)): GB Carbon Intensity API (NESO), CC BY 4.0, keyless. The cache holds 21 days
   (2026-09-01 to 2026-09-21, 1008 half-hours) of national forecast + actual and regional forecast for 7
   grid regions. It is fetched on 2026-09-29; source, license, window and SHA-256 are in
   `data/gb_carbon_intensity.meta.json`. The API publishes no regional actuals, so realised regional
   intensity = regional forecast x the same half-hour's national actual/forecast ratio. The error is real
-  but common to all regions (see limitations).
+  but common to all regions (see below).
 - **Regions** ([`carbon_oracle/data.py`](carbon_oracle/data.py)): 5 in England, 2 in Wales. Residency zones
   are `england`, `wales`, `gb` (any) and `pinned` (home region only). Scottish grid regions are left
   out: the API reports about 0 gCO2/kWh for them throughout the window, which would make them trivially
@@ -109,21 +135,101 @@ python -m carbon_oracle.fetch --start 2026-09-01 --days 21   # optional: refresh
 - **RGW** ([`carbon_oracle/policies.py`](carbon_oracle/policies.py)): the same enumeration on forecasts. A
   candidate is feasible only if the (1 - eps) empirical quantile of `forecast_wait x queue_error +
   nominal_runtime x runtime_error` fits before the deadline. The errors come from 1000 historical draws
-  per region and job class. The deterministic optimizer is the same code with point estimates.
-  Placement is final: no re-planning, no preemption.
+  per region and job class. The deterministic optimizer is the same code with point estimates. If no
+  candidate passes the bound, RGW takes the earliest-finishing allowed region now. Placement is final:
+  no re-planning, no preemption.
 
-### Failure taxonomy
+## Threat and failure model
 
-| Failure | Who suffers here | Handled by RGW? |
-|---|---|---|
-| Carbon forecast wrong (common-mode, 0.792x-1.649x p5-p95) | everyone vs the oracle | no: RGW optimises the forecast it gets |
-| Queue wait longer than forecast | deterministic, best-window | yes, up to `eps`, if history is representative |
-| Runtime longer than estimated | deterministic, best-window | yes, same condition |
-| Error distribution shifts worse than history | RGW too (10.5% misses at eps = 0.05) | **no** |
-| Errors smaller than history | RGW pays carbon for unused slack | **no** (negative case) |
-| Residency zone misconfigured | every policy | no: the mapping is trusted input ([threat model](docs/THREAT_MODEL.md)) |
+CARBON ORACLE is an offline simulator: it proposes placements, never submits a job, calls a cloud API
+or holds a credential. The only network code is the separate data refresh, which reads a public,
+keyless API over a fixed HTTPS host. The assets are residency guarantees, deadline guarantees and the
+integrity of the evidence (reports record commit, command, seed and data hash). Forecasts and the
+queue/runtime history are untrusted signals; the region-to-residency mapping is trusted input. Full
+analysis: [`docs/THREAT_MODEL.md`](docs/THREAT_MODEL.md).
 
-## Prior art and what is not new
+**Failure taxonomy.** Classes the benchmark injects and measures:
+
+| Failure | Where it is injected | Who suffers here | Handled by RGW? |
+|---|---|---|---|
+| Carbon forecast wrong (common-mode, 0.792x-1.649x p5-p95) | real trace, every scenario | everyone vs the oracle | no: RGW optimises the forecast it gets |
+| Queue wait longer than forecast (lognormal error) | every regime | deterministic, best-window | yes, up to `eps`, if history is representative |
+| Queue congestion event (3-6x wait) | 3% of slots nominal, 10% tail shift | deterministic, best-window | yes in nominal (it is in the history); not in tail shift |
+| Runtime longer than estimated | every regime | deterministic, best-window | yes, same condition |
+| Error distribution shifts worse than history | `tail_shift` regime | RGW too (10.5% misses at eps = 0.05) | **no** |
+| Errors smaller than history | `calm` regime | RGW pays carbon for unused slack | **no** (negative case) |
+| Placement outside the residency zone | checked for every policy | none observed (0 violations) | prevented by construction: hard filter |
+| No placement can meet the deadline even in hindsight | counted, then excluded | none in this run (0 jobs) | n/a |
+
+Classes the benchmark does **not** cover: region-specific carbon forecast error (only common-mode),
+queue contention caused by the schedulers' own placements, job crashes, node failures and preemption,
+stale or missing forecasts at decision time, poisoned or mis-logged history (named in the threat model,
+not simulated), and a misconfigured residency mapping (trusted input, not tested against).
+
+## Experiment design
+
+- **Scenarios**: 24 scenarios x 50 jobs. 16 `nominal` days (`nominal-d00` to `nominal-d15`), 4 `calm`
+  (days 1, 5, 9, 13: queue and runtime errors shifted down, half the spread, no congestion) and 4
+  `tail_shift` (days 3, 7, 11, 15: 1.5x the spread, 10% congestion events). Each job has a class, a
+  release slot on its day, a nominal runtime, a deadline with class-specific slack, a home region and a
+  residency zone (`gb` 40%, `england` 35%, `wales` 15%, `pinned` 10%).
+- **Data source and license**: real carbon intensity from the GB Carbon Intensity API (NESO), CC BY 4.0,
+  2026-09-01 to 2026-09-21, cached with its SHA-256. Jobs, prices, queue waits and runtime errors are
+  synthetic (`carbon_oracle/model.py`).
+- **Ground truth**: a hindsight oracle per job that knows realised carbon, queue waits and runtime and
+  takes the best on-time (region, submit slot). Realised values are drawn once per scenario and shared
+  by every policy (common random numbers).
+- **Naive baselines**: run immediately in the home region; carbon-agnostic cheapest; lowest-carbon-now;
+  deadline-first (shortest forecast queue).
+- **Prior-art-inspired baseline**: best window in the home region, modelled on the Green Software
+  Foundation Carbon Aware SDK's best-window query (one location, no queue or runtime uncertainty).
+- **Strong practitioner heuristic**: the deterministic optimizer with hand-tuned padding (2x queue,
+  +25% runtime).
+- **Ablation**: the deterministic forecast optimizer, which is RGW with the chance constraint removed.
+  `eps` is swept over 0.01, 0.05 (the mechanism) and 0.20.
+- **Seeds**: `--seed 7` (default). Scenario `i` uses seed `7000 + i`; the error history (1000 draws per
+  region and job class, from the nominal regime) uses `7999`.
+- **Metrics**: Green Regret per job, objective gap per job, deadline misses, residency violations,
+  carbon kg (and vs run-now, vs oracle), cost.
+- **Regenerate**: `python -m pytest -q`, then `python -m carbon_oracle bench --out reports`, which writes
+  `reports/benchmark.json` and `reports/benchmark.md` with provenance. CI runs the same benchmark on
+  Python 3.10 and 3.12.
+
+## What this result does not establish
+
+- **Not a discovery about calibration in the nominal case.** The history and the realised waits come
+  from the same generator, so the miss rate staying under `eps` is expected by construction. What is
+  measured is the carbon price of the bound and how it compares with hand-tuned padding.
+- **Not evidence about residency handling.** 0 violations for every policy holds by construction:
+  residency is a filter applied before optimisation, not a trade-off.
+- **Not a ranking that transfers to real clusters.** Synthetic queues, runtimes and prices drive the
+  result. The carbon-vs-deadline tension exists because low-carbon regions were assumed to be
+  congested; other assumptions give other rankings.
+- **Not a statement about any cloud provider or real region.** The regions are hypothetical and placed
+  in GB grid regions for illustration only.
+- **Not a measured carbon saving.** No real job ran, no cloud scheduler was involved, and intensity is
+  average (not marginal), for one grid over three weeks in September. Data transfer, storage and
+  embodied carbon are not counted.
+- **Not a test of spatial carbon forecast error.** Regional actuals are derived from one national
+  ratio, so the error never changes which region is cleanest, only which time. The API does not
+  document the lead time of its historical forecasts. It is likely shorter than a day-ahead planner's,
+  so errors are probably understated.
+- **Not a tight bound.** RGW's realised miss rate (1.0%) sits far below `eps` (5%), probably because
+  many optima are not on the constraint boundary. The bound is conservative, not tight.
+- **Not robust to shift.** A chance constraint is only as good as the history it was calibrated on
+  (tail shift: 10.5% misses against a promised 5%).
+- **Not a new algorithm** (see Research lineage).
+
+## Limitations
+
+- Jobs are independent: placing many jobs in one region does not lengthen its queue. There is no
+  capacity coupling, fairness or multi-tenant interference.
+- No re-planning or preemption. A deterministic scheduler that re-plans on overrun would miss less.
+- The objective weights (100 gCO2/kWh reference, cost weight 1, penalty 10) are parameters. Only `eps`
+  is swept.
+- The error history is static; there is no online recalibration.
+
+## Research lineage
 
 The mechanism is not new. Chance-constrained, uncertainty-aware carbon scheduling is published work:
 
@@ -152,23 +258,11 @@ offline, reproducible benchmark on real published forecast/actual data, with res
 classes. It compares against the baselines practitioners actually use, including a hand-tuned padding
 heuristic that the risk bound only narrowly beats, and it reports where the risk bound loses.
 
-## Limitations
+## Roadmap
 
-- **Synthetic queues, runtimes and prices drive the result.** The carbon-vs-deadline tension exists
-  because low-carbon regions were assumed to be congested. Other assumptions give other rankings.
-- **Carbon forecast error is common-mode.** Regional actuals are derived from one national ratio, so the
-  error never changes which region is cleanest, only which time. The API does not document the lead
-  time of its historical forecasts. It is likely shorter than a day-ahead planner's, so errors are
-  probably understated.
-- Jobs are independent: placing many jobs in one region does not lengthen its queue. There is no
-  capacity coupling, fairness or multi-tenant interference.
-- No re-planning or preemption. A deterministic scheduler that re-plans on overrun would miss less.
-- Average (not marginal) intensity, one grid, three weeks in September. Data transfer, storage and
-  embodied carbon are not counted.
-- The objective weights (100 gCO2/kWh reference, cost weight 1, penalty 10) are parameters. Only `eps`
-  is swept.
-- RGW's realised miss rate (1.0%) sits far below `eps` (5%), probably because many optima are not on
-  the constraint boundary. The bound is conservative, not tight.
+v0.2: Kubernetes queue controller or scheduler extender, capacity coupling between jobs, re-planning on
+overrun, online recalibration of the error history (the tail-shift fix), a second grid with real
+regional actuals, and a CI benchmark matrix over the objective weights.
 
 ## Layout
 
@@ -184,11 +278,5 @@ reports/                    generated evidence (JSON + Markdown)
 
 Deliberately absent in v0.1: cloud adapters, Kubernetes, OpenTelemetry, Terraform, identity. The thesis
 can be tested offline, and none of those would change a number here.
-
-## Next (v0.2)
-
-Kubernetes queue controller or scheduler extender, capacity coupling between jobs, re-planning on
-overrun, online recalibration of the error history (the tail-shift fix), a second grid with real
-regional actuals, and a CI benchmark matrix over the objective weights.
 
 Data: Carbon Intensity API, National Energy System Operator, CC BY 4.0. Code: MIT licensed.
